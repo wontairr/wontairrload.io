@@ -3,15 +3,123 @@
     <head>
         <link rel="stylesheet" href="style.css">
     </head>
-    <body>
-    <h1>
-        <span>
-        </span>
-    </h1>
-    <h1>
+    <body id="body">
+
+    <audio id="music1" loop >
+        <source src="awesomemusic1.mp3" type="audio/mpeg">
+    </audio>
+    
+    <audio id="music2" loop >
+        <source src="awesomemusic2.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="music3" loop>
+        <source src="awesomemusic3.mp3" type="audio/mpeg">
+    </audio>
+
+    <h1 id="webtitle">
         <div style="text-align: center;">
-            <img src="XwI7.gif" height="50"> WELCOME TO MY AWESOME WEBSITE<img src="XwI7.gif" height="50">
+            <img src="XwI7.gif" height="50"> WELCOME TO <span id="serverText">MY AWESOME SERVER</span><img src="XwI7.gif" height="50">
         </div>
     </h1>
+    <br>
+    <br>
+    <br>
+    <h1>
+        <div style="text-align: center;">
+            <i></i> <span id="mapText">gm_construct</span>
+            <br>
+            <br>
+            <br>
+            <br>
+            <h4>
+                <span id="playersList">/ players \</span>
+                <div style="text-align: center;" id="text-container"></div>
+                <h6>(garry hasnt added a function to get playercounts)</h6>
+                
+            </h4>
+            
+            
+        </div>
+    </h1>
+    <img src="fire.gif" id="gif2">
+    <img src="fire.gif" id="gif3">
+    <img src="coolsign.gif" id="gif4">
+    <img src="bigswordt.gif" id="gif5">
+    <hr color="blue" size="3">
+    <br>
+    <a href="https://www.zombo.com" id="textFake">CLICK HERE TO VISIT OUR WEBSITE!</a>
+    <h1><div style="text-align: center;" id="statusText"><h5>loading</h5></div></h1>
+    <h1>
+        <div style="text-align: center;"><span id="speenText">/</span></div>
+    </h1>
+    <img src="simulation.gif" width="420" height="250" id="gif">
+
+    <!--id="outputText"-->
+    <script>
+        const mapElement = document.getElementById("mapText");
+        const steamIdElement = document.getElementById("steamIDText");
+        const playerElement = document.getElementById("playerText");
+        const statusElement = document.getElementById("statusText");
+        const speenElement = document.getElementById("speenText");
+        const serverNameElement = document.getElementById("serverText");
+
+        const music1 = document.getElementById("music1");
+        const music2 = document.getElementById("music2");
+        const music3 = document.getElementById("music3");
+
+        music1.volume = 0.7;
+        music2.volume = 0.4;
+        music3.volume = 0.4;
+        
+        const container = document.getElementById("text-container");
+
+
+        function GameDetails( servername, serverurl, mapname, maxplayers, steamid, gamemode, volume, language ) {
+            mapElement.textContent = mapname;
+            playerElement.textContent = maxplayers;
+            serverNameElement = steamid;
+        }
+
+        function SetStatusChanged( status ) {
+            statusElement.textContent = status;
+        }
+
+        function speen(){
+            setInterval(function() {
+                let content = speenElement.textContent
+                if(content == "/") { speenElement.textContent = "--";}
+                if(content == "--") { speenElement.textContent = "\\";}
+                if(content == "\\") { speenElement.textContent = "/";}
+                if(content == "|") { speenElement.textContent = "/";}
+                // Your code to be executed repeatedly at the specified interval
+            }, 300);
+        }
+        speen()
+        function playMusic(){
+            if(Math.random(0,1) < 0.3) {
+                music1.play();
+            } else if(Math.random(0,1) < 0.5){
+                music2.play();
+            } else if(Math.random(0,1) < 0.2){
+                music3.play();
+            } else{ music1.play(); }
+        }
+        playMusic();
+
+        // Create a for loop to add four text elements
+        for (let i = 0; i < 4; i++) {
+            // Create a new text element (e.g., a <p> element)
+            const textElement = document.createElement("img");
+
+            // Set the text content of the element
+            textElement.id="player";
+            textElement.height="70";
+            textElement.src="missing.png";
+
+            // Append the text element to the container
+            container.appendChild(textElement);
+        }
+    </script>
     </body>
 </html>

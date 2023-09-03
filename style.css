@@ -1,8 +1,211 @@
+
+
+@keyframes slide{
+    0% {
+        background-position: 0px
+    }
+    100% {
+      background-position: -1600px
+    }
+}
 body{
+    overflow: hidden;
     background-image: url("bg.png");
     background-size: 50px;
     background-color: rgb(0, 0, 0);
+    animation: slide 60s linear infinite;
+}
+#webtitle{
+    color:red
 }
 h1{
-    color:red
+    color:white
+}
+p{
+    color:white
+}
+@keyframes colorChange {
+    0% {
+        color: blue;
+    }
+    50% {
+        color: red;
+    }
+    75% {
+        color: green;
+    }
+    100%{
+        color:blue;
+    }
+}
+@keyframes moveWave {
+    0% {
+        top: 0;
+    }
+    50%{
+        top:20px;
+    }
+    100%{
+        top:0px;
+    }
+}
+
+
+@keyframes moveUpAndDown {
+    0% {
+        top: 0;
+        left: 0;
+    }
+    12% {
+        top: 10px;
+        left: 10px;
+    }
+    25% {
+        top: 0;
+        left: 0;
+    }
+    37% {
+        top: 10px;
+        left: -10px;
+    }
+    50% {
+        top: 0;
+        left: 0;
+    }
+    62% {
+        top: -10px;
+        left: -10px;
+    }
+    75% {
+        top: 0;
+        left: 0;
+    }
+    87% {
+        top: -10px;
+        left: 10px;
+    }
+    100% {
+        top: 0;
+        left: 0;
+    }
+}
+
+#player{
+    position: relative;
+    animation: colorChange 3s linear infinite, /* Apply the colorChange animation infinitely over 3 seconds */
+                moveWave 1s ease-in-out infinite
+}
+
+#gif{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+#gif2{
+    position: absolute;
+    height:150px;
+    bottom: 520px;
+    right: 0px;
+}
+#gif3{
+    position: absolute;
+    height:150px;
+    bottom: 520px;
+    right: 1;
+}
+#gif4{
+    position: absolute;
+    height:130px;
+    bottom: 730px;
+    right: 100px;
+}
+#gif5{
+    position: absolute;
+    height:300px;
+    bottom: 650px;
+    right: 1400px;
+}
+#gif6{
+    position: absolute;
+    height:30px;
+    bottom: 0px;
+    right: 1500px;
+}
+#gif7{
+    position: absolute;
+    height:100px;
+    bottom: 0px;
+    right: 600px;
+}
+#textFake{
+    position: absolute;
+    bottom: 0px;
+    right: 1;
+}
+
+#player:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+#player:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+#player:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+#player:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+@font-face {
+    font-family: 'MSSerifPixel';
+    src: url("ms-sans-serif-1.ttf");
+}
+@font-face {
+    font-family: 'ComicSansI';
+    src: url("COMICZ.ttf");
+}
+@font-face {
+    font-family: 'ComicSans';
+    src: url("COMIC.ttf");
+}
+h6{
+    font-family: 'MSSerifPixel', sans-serif;
+    font-weight: 100;
+    font-size:xx-small;
+    color:rgba(255, 255, 255, 0.2);
+}
+#playerText{
+    font-family: 'MSSerifPixel', sans-serif;
+    font-weight: 100;
+}
+
+#login{
+    font-family: 'ComicSans', sans-serif;
+    font-weight: 50;
+
+    position: absolute;
+    bottom: 910px;
+    right: 10px;
+}
+
+
+#playersList{
+    font-family: 'MSSerifPixel', sans-serif;
+    font-weight: 1;
+    font-size:x-large;
+    color:beige
+}
+
+#statusText{
+    font-family: 'ComicSansI', sans-serif;
+    font-weight: 1;
+}
+
+#mapText{
+    position: relative;
+    animation: colorChange 1s linear infinite, /* Apply the colorChange animation infinitely over 3 seconds */
+                moveUpAndDown 0.2s step-end infinite;
 }
