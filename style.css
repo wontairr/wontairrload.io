@@ -174,11 +174,11 @@ p{
 }
 @font-face {
     font-family: 'ComicSansI';
-    src: url("comici.ttf");
+    src: url("fonts/comic-sans-italic.woff") format('woff');
 }
 @font-face {
     font-family: 'ComicSans';
-    src: url("comic.ttf");
+    src: url("fonts/comic-sans.woff") format('woff');
 }
 h6{
     font-family: 'MSSerifPixel', sans-serif;
