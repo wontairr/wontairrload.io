@@ -174,11 +174,11 @@ p{
 }
 @font-face {
     font-family: 'ComicSansI';
-    src: url("COMICZ.ttf");
+    src: url("comici.ttf");
 }
 @font-face {
     font-family: 'ComicSans';
-    src: url("COMIC.ttf");
+    src: url("comic.ttf");
 }
 h6{
     font-family: 'MSSerifPixel', sans-serif;
@@ -197,7 +197,7 @@ h6{
 }
 
 #statusText{
-    font-family: 'ComicSansI', sans-serif, monospace;
+    font-family: 'ComicSansI', sans-serif;
 }
 
 #mapText{
