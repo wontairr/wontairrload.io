@@ -2,21 +2,21 @@
 <html>
     <head>
         <link rel="stylesheet" href="style.css">
+
+        <audio id="music1" loop >
+            <source src="music/awesomemusic1.mp3" type="audio/mpeg">
+        </audio>
+        
+        <audio id="music2" loop >
+            <source src="music/awesomemusic2.mp3" type="audio/mpeg">
+        </audio>
+    
+        <audio id="music3" loop>
+            <source src="music/awesomemusic3.mp3" type="audio/mpeg">
+        </audio>
     </head>
     <body id="body">
-
-    <audio id="music1" loop >
-        <source src="awesomemusic1.mp3" type="audio/mpeg">
-    </audio>
-    
-    <audio id="music2" loop >
-        <source src="awesomemusic2.mp3" type="audio/mpeg">
-    </audio>
-
-    <audio id="music3" loop>
-        <source src="awesomemusic3.mp3" type="audio/mpeg">
-    </audio>
-
+    <button id="button" color="black" style="background-color: black;">Click</button>
     <h1 id="webtitle">
         <div style="text-align: center;">
             <img src="XwI7.gif" height="50"> WELCOME TO <span id="serverText">MY AWESOME SERVER</span><img src="XwI7.gif" height="50">
@@ -58,15 +58,14 @@
     <!--id="outputText"-->
     <script>
         const mapElement = document.getElementById("mapText");
-        const steamIdElement = document.getElementById("steamIDText");
-        const playerElement = document.getElementById("playerText");
         const statusElement = document.getElementById("statusText");
         const speenElement = document.getElementById("speenText");
-        const serverNameElement = document.getElementById("serverText");
 
         const music1 = document.getElementById("music1");
         const music2 = document.getElementById("music2");
         const music3 = document.getElementById("music3");
+
+        const button = document.querySelector("#button");
 
         music1.volume = 0.7;
         music2.volume = 0.4;
@@ -74,15 +73,37 @@
         
         const container = document.getElementById("text-container");
 
+        let inGame = false;
 
         function GameDetails( servername, serverurl, mapname, maxplayers, steamid, gamemode, volume, language ) {
             mapElement.textContent = mapname;
-            playerElement.textContent = maxplayers;
-            serverNameElement = steamid;
+            if(Math.random(0,1) < 0.3) {
+                    music1.play();
+                } else if(Math.random(0,1) < 0.5){
+                    music2.play();
+                } else if(Math.random(0,1) < 0.2){
+                    music3.play();
+                } else{ music1.play(); }
         }
 
         function SetStatusChanged( status ) {
             statusElement.textContent = status;
+        }
+        function playMusic(){
+            if(Math.random(0,1) < 0.3) {
+                music1.play();
+            } else if(Math.random(0,1) < 0.5){
+                music2.play();
+            } else if(Math.random(0,1) < 0.2){
+                music3.play();
+            } else{ music1.play(); }
+        }
+        if (!inGame){
+            button.addEventListener("click", () => {
+                playMusic();
+            });    
+        } else{
+            button.remove()
         }
 
         function speen(){
@@ -95,17 +116,7 @@
                 // Your code to be executed repeatedly at the specified interval
             }, 300);
         }
-        speen()
-        function playMusic(){
-            if(Math.random(0,1) < 0.3) {
-                music1.play();
-            } else if(Math.random(0,1) < 0.5){
-                music2.play();
-            } else if(Math.random(0,1) < 0.2){
-                music3.play();
-            } else{ music1.play(); }
-        }
-        playMusic();
+        speen();
 
         // Create a for loop to add four text elements
         for (let i = 0; i < 4; i++) {

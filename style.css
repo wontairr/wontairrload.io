@@ -143,6 +143,15 @@ p{
     right: 1;
 }
 
+#button{
+    border: 0;
+    background: none;
+    box-shadow: none;
+    border-color: rgb(80, 77, 77);
+    border-radius: 1px;
+    border-width: 10px;
+}
+
 #player:nth-child(1) {
     animation-delay: 0.2s;
 }
@@ -177,19 +186,7 @@ h6{
     font-size:xx-small;
     color:rgba(255, 255, 255, 0.2);
 }
-#playerText{
-    font-family: 'MSSerifPixel', sans-serif;
-    font-weight: 100;
-}
 
-#login{
-    font-family: 'ComicSans', sans-serif;
-    font-weight: 50;
-
-    position: absolute;
-    bottom: 910px;
-    right: 10px;
-}
 
 
 #playersList{
