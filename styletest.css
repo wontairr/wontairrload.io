@@ -1,0 +1,48 @@
+@keyframes goofy{
+    0%{
+        tranform: translate(1000px, 50%);
+        transform: rotate(40deg);
+    }
+    25%{
+        tranform: translate(1000px, 50%);
+        transform: rotate(0deg);
+    }
+    50%{
+        tranform: translate(1000px, 50%);
+        transform: rotate(-40deg);
+    }
+    75%{
+        transform: translate(42px, 18px);
+        transform: rotate(0deg);
+    }
+    100%{
+        tranform: translate(1000px, 50%);
+        transform: rotate(40deg);
+    }
+}
+
+
+.buttonClass {
+    font-size:15px;
+    font-family:Arial;
+    width:140px;
+    height:50px;
+    border-width:1px;
+    color:#fff;
+    border-color:#d02718;
+    font-weight:bold;
+    border-top-left-radius:18px;
+    border-top-right-radius:18px;
+    border-bottom-left-radius:18px;
+    border-bottom-right-radius:18px;
+    box-shadow: 3px 4px 0px 0px #8a2a21;
+    text-shadow: 0px 1px 0px #810e05;
+    background:linear-gradient(#c62d1f, #f24437);
+    position:relative;
+    animation: goofy 0.8s ease-in-out infinite;
+  }
+  
+  .buttonClass:hover {
+    background: linear-gradient(#f24437, #c62d1f);
+  }
+                

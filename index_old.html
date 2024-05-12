@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style_old.css">
 
         <audio id="music1" loop >
             <source src="music/awesomemusic1.mp3" type="audio/mpeg">
@@ -32,12 +32,12 @@
             <br>
             <br>
             <br>
-            <h6>
+            <h4>
                 <span id="playersList">/ players \</span>
                 <div style="text-align: center;" id="text-container"></div>
                 <h6>(garry hasnt added a function to get playercounts)</h6>
                 
-            </h6>
+            </h4>
             
             
         </div>
@@ -49,7 +49,7 @@
     <hr color="blue" size="3">
     <br>
     <a href="https://www.zombo.com" id="textFake">CLICK HERE TO VISIT OUR WEBSITE!</a>
-    <h1><div style="text-align: center; font-family: 'ComicSansI', sans-serif;" id="statusText"><h5>loading...</h5></div></h1>
+    <h1><div style="text-align: center; font-family: 'ComicSansI', sans-serif;" id="statusText"><h5>loading</h5></div></h1>
     <h1>
         <div style="text-align: center;"><span id="speenText">/</span></div>
     </h1>
@@ -60,7 +60,7 @@
         const mapElement = document.getElementById("mapText");
         const statusElement = document.getElementById("statusText");
         const speenElement = document.getElementById("speenText");
-     
+
         const music1 = document.getElementById("music1");
         const music2 = document.getElementById("music2");
         const music3 = document.getElementById("music3");
@@ -115,13 +115,6 @@
                 if(content == "|") { speenElement.textContent = "/";}
                 // Your code to be executed repeatedly at the specified interval
             }, 300);
-            setInterval(function(){
-                let content = statusElement.textContent
-                if(content == "loading") { statusElement.textContent = "loading.";}
-                if(content == "loading.") { statusElement.textContent = "loading..";}
-                if(content == "loading..") { statusElement.textContent = "loading...";}
-                if(content == "loading...") { statusElement.textContent = "loading";}
-            },600);
         }
         speen();
 
